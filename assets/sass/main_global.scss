@@ -1,8 +1,10 @@
 // variables,mixins,extends
 @import "_mixins.scss";
 @import "_vars.scss";
+@import "_fonts.scss";
 // base
 @import "base";
+@import "components/_rating";
 @import "main";
 // icons
 @import "icons";

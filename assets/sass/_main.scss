@@ -10,4 +10,8 @@ html * {
 
 body {
     background: #e5e5e5;
+    font-family: $mainFF;
+    font-size: rem(14);
+    line-height: rem(24);
+    color: $mainTextColor;
 }

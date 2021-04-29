@@ -1,0 +1,96 @@
+.rating {
+    background: #fff;
+    padding: rem(18) rem(16) rem(31);
+    &__title {
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: rem(24);
+        color: $mainTitleColor;
+    }
+    &__rate {
+        font-weight: 500;
+        line-height: rem(52);
+        font-size: rem(20);
+        margin-top: rem(15);
+        text-align: center;
+        color: $mainTitleColor;
+        span {
+            font-size: rem(40);
+            margin-right: rem(5);
+        }
+    }
+    &__stars {
+        display: flex;
+        justify-content: center;
+    }
+    &__star {
+        position: relative;
+        font-size: rem(24);
+        margin: 0 rem(4);
+        color: #ced7e0;
+        &:before {
+            display: block;
+            @extend %icon-star;
+        }
+        &--light {
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            color: #fabd48;
+            overflow: hidden;
+        }
+    }
+    &__comments {
+        font-size: rem(13);
+        line-height: rem(21);
+        margin-top: rem(13);
+        color: #87919c;
+        text-align: center;
+    }
+    &__bars {
+        margin-top: rem(20);
+    }
+    &__bar-item {
+        margin-bottom: rem(1);
+    }
+    &__bar-title {
+        font-size: rem(14);
+        line-height: rem(22);
+        margin-bottom: rem(-2);
+        color: $mainTitleColor;
+    }
+    &__bar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    &__bar-line {
+        flex-grow: 1;
+        background: #eaf1f9;
+        border-radius: rem(500);
+        height: rem(6);
+        margin-top: rem(-2);
+    }
+    &__bar-filled {
+        height: rem(6);
+        border-radius: rem(500);
+        &--high {
+            background: $colorPositive;
+        }
+        &--middle {
+            background: #fabd48;
+        }
+        &--low {
+            background: $colorNegative;
+        }
+    }
+    &__bar-value {
+        font-weight: 500;
+        font-size: rem(16);
+        line-height: rem(24);
+        color: $mainTitleColor;
+        width: rem(31);
+        margin-left: rem(11);
+    }
+}
