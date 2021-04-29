@@ -1,0 +1,13 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+}
+
+html * {
+    max-height: rem(1000000);
+}
+
+body {
+    background: #e5e5e5;
+}

@@ -1,0 +1,21 @@
+import gulp from 'gulp'
+import imagemin from 'gulp-imagemin'
+
+export default function imageMinify() {
+    return gulp.src('assets/i/*.{gif,png,jpg,svg,webp}')
+        .pipe(imagemin([
+            imagemin.gifsicle({ interlaced: true }),
+            imagemin.mozjpeg({
+                quality: 75,
+                progressive: true
+            }),
+            imagemin.optipng({ optimizationLevel: 5 }),
+            imagemin.svgo({
+                plugins: [
+                    { removeViewBox: true },
+                    { cleanupIDs: false }
+                ]
+            })
+        ]))
+        .pipe(gulp.dest('build/i'))
+}

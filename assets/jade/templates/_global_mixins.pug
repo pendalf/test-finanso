@@ -1,0 +1,51 @@
+block mixins_functions
+	-
+		var implode = function(array) {
+			var output = '';
+			array.forEach(function(item, i) {
+
+				if (i > 0) {
+					output += ' ' + item;
+				}
+				else {
+					output += item;
+				}
+			})
+			return output;
+		}
+	-
+		var is_array = function(variable){
+
+			if (Array.isArray(variable)) {
+
+				return true;
+			}
+			else {
+
+				return false;
+			}
+		}
+
+	-
+		var is_object = function(variable){
+
+			if (typeof variable === 'object') {
+
+				return true;
+			}
+			else {
+
+				return false;
+			}
+		}
+
+mixin head(array)
+	meta(charset='UTF-8')
+	title!=array.title_inner
+	meta(name="viewport", content="width=device-width")
+	link(rel="preconnect", href="https://fonts.gstatic.com")
+	link(href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap", rel="stylesheet")
+	link(rel="stylesheet" media="all" href="styles/main_global.min.css")
+
+mixin scripts
+	script(src='js/main.js')
