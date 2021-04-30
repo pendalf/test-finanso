@@ -1,0 +1,42 @@
+.likes {
+    display: flex;
+    &__item {
+        font-weight: 600;
+        font-size: rem(14);
+        line-height: rem(22);
+        display: flex;
+        align-items: center;
+        color: #87919c;
+        transition: 0.2 all;
+        cursor: pointer;
+        &:before {
+            margin-right: rem(6);
+            font-size: rem(20);
+        }
+        &--like {
+            &:before {
+                @extend %icon-like;
+            }
+            &.active,
+            &:hover {
+                &:before {
+                    color: $colorPositive;
+                }
+            }
+        }
+        &--dislike {
+            &:before {
+                @extend %icon-dislike;
+            }
+            &.active,
+            &:hover {
+                &:before {
+                    color: $colorNegative;
+                }
+            }
+        }
+        &+& {
+            margin-left: rem(19);
+        }
+    }
+}

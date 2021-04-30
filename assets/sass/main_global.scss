@@ -4,7 +4,9 @@
 @import "_fonts.scss";
 // base
 @import "base";
+@import "components/_likes";
 @import "components/_rating";
+@import "components/_comments";
 @import "main";
 // icons
 @import "icons";

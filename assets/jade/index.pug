@@ -52,3 +52,12 @@ block content_block
 				//- end .rating__bar-item
 
 		//- end rating
+		//- comments
+		.comments
+			.comments__title Отзывы о компании ООО “Ковалевский”
+			.comments__items
+				+commentsRender(comments)
+			.comments__footer
+				a.btn.btn--more(href="#") Показать еще
+					span.btn__count 34
+		//- end comments

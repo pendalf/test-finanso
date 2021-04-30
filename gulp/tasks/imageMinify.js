@@ -2,7 +2,7 @@ import gulp from 'gulp'
 import imagemin from 'gulp-imagemin'
 
 export default function imageMinify() {
-    return gulp.src('assets/i/*.{gif,png,jpg,svg,webp}')
+    return gulp.src('assets/i/**/*.{gif,png,jpg,svg,webp}')
         .pipe(imagemin([
             imagemin.gifsicle({ interlaced: true }),
             imagemin.mozjpeg({

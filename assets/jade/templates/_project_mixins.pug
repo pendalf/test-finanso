@@ -8,3 +8,51 @@ mixin footer
 	
 			
 	// End Footer
+
+mixin commentsRender(comments)
+	each comment in comments
+		//- comment
+		.comment
+			.comment__head
+				.comment__ellipsis
+					a.icon--ellipsis(href="#") 
+				.comment__userpic
+					if comment.userpic && comment.userpic !== ''
+						img(src=comment.userpic, alt=comment.name)
+				.comment__info
+					.comment__name #{comment.name}
+					span.status #{comment.status}
+					.comment__from
+						.comment__flag
+							if comment.flag && comment.flag !== ''
+								img(src=comment.flag, alt=comment.country)
+						.comment__country #{comment.country}
+					.comment__date #{comment.date}
+				.comment__count-messages #{comment.countMessages}
+				.comment__rating
+					.rating-short #{comment.rate}
+				.comment__store
+					.comment__store-name
+						span #{comment.store}
+					if comment.link && comment.link !== ''
+						a(href=comment.link) Перейти
+
+			.comment__content
+				if comment.advantages && comment.advantages !== ''
+					.comment__char.comment__char--positive
+						.comment__char-title Достоинства
+						.comment__char-content #{comment.advantages}
+				if comment.disadvantages && comment.disadvantages !== ''
+					.comment__char.comment__char--negative
+						.comment__char-title Недостатки
+						.comment__char-content #{comment.disadvantages}
+			.comment__footer
+				button.btn Ответить
+				.likes
+					.likes__item.likes__item--like
+						.likes__count #{comment.likes}
+					.likes__item.likes__item--dislike
+						.likes__count #{comment.dislikes}
+
+
+		//- end comment

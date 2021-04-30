@@ -14,8 +14,32 @@
     @include icon-styles-1;
 }
 
-%icon-star {
+%icon-dislike {
         content: "\EA01";
+        @extend %icon1;
+    }
+    %icon-ellipsis  {
+        content: "\EA02";
+        @extend %icon1;
+    }
+    %icon-like {
+        content: "\EA03";
+        @extend %icon1;
+    }
+    %icon-minus {
+        content: "\EA04";
+        @extend %icon1;
+    }
+    %icon-no-pic {
+        content: "\EA05";
+        @extend %icon1;
+    }
+    %icon-plus {
+        content: "\EA06";
+        @extend %icon1;
+    }
+    %icon-star {
+        content: "\EA07";
         @extend %icon1;
     }
     [class^="icon-"] {
@@ -24,7 +48,37 @@
 
 .icon {
     font-style: normal;
-    &--star {
+    &--dislike {
+            &:before {
+                @extend %icon-dislike;
+            }
+        }
+        &--ellipsis  {
+            &:before {
+                @extend %icon-ellipsis ;
+            }
+        }
+        &--like {
+            &:before {
+                @extend %icon-like;
+            }
+        }
+        &--minus {
+            &:before {
+                @extend %icon-minus;
+            }
+        }
+        &--no-pic {
+            &:before {
+                @extend %icon-no-pic;
+            }
+        }
+        &--plus {
+            &:before {
+                @extend %icon-plus;
+            }
+        }
+        &--star {
             &:before {
                 @extend %icon-star;
             }
