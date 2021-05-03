@@ -148,5 +148,12 @@
         margin-right: rem(6);
         font-size: rem(16);
         @extend %icon-star;
+        @media only screen and (min-width: $tablet) {
+            margin-top: rem(-2);
+        }
+    }
+    @media only screen and (min-width: $tablet) {
+        font-size: rem(15);
+        line-height: rem(28);
     }
 }

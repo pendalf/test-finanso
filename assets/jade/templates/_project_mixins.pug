@@ -21,7 +21,8 @@ mixin commentsRender(comments)
 						img(src=comment.userpic, alt=comment.name)
 				.comment__info
 					.comment__name #{comment.name}
-					span.status #{comment.status}
+					- const statusClass = comment.status !== 'Опытный' ? 'status--blocked' : ''
+					span.status(class=statusClass) #{comment.status}
 					.comment__from
 						.comment__flag
 							if comment.flag && comment.flag !== ''
@@ -31,11 +32,13 @@ mixin commentsRender(comments)
 				.comment__count-messages #{comment.countMessages}
 				.comment__rating
 					.rating-short #{comment.rate}
-				.comment__store
-					.comment__store-name
-						span #{comment.store}
-					if comment.link && comment.link !== ''
-						a(href=comment.link) Перейти
+				.comment__messages-store
+					.comment__count-messages #{comment.messageCount}
+					.comment__store
+						.comment__store-name
+							span #{comment.store}
+						if comment.link && comment.link !== ''
+							a(href=comment.link) Перейти
 
 			.comment__content
 				if comment.advantages && comment.advantages !== ''

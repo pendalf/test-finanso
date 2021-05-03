@@ -12,6 +12,9 @@
         &:before {
             margin-right: rem(6);
             font-size: rem(20);
+            @media only screen and (min-width: $tablet) {
+                margin-right: rem(10);
+            }
         }
         &--like {
             &:before {
@@ -37,6 +40,9 @@
         }
         &+& {
             margin-left: rem(19);
+            @media only screen and (min-width: $tablet) {
+                margin-left: rem(22);
+            }
         }
     }
 }

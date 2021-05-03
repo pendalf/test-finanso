@@ -1,15 +1,26 @@
 .comments {
     margin: rem(28) rem(16) rem(40);
+    @media only screen and (min-width: $tablet) {
+        margin: rem(36) rem(0) rem(40);
+    }
     &__title {
         font-weight: 500;
         font-size: rem(16);
         line-height: rem(24);
         margin-bottom: rem(22);
         color: $mainTitleColor;
+        @media only screen and (min-width: $tablet) {
+            font-size: rem(20);
+            line-height: rem(32);
+            margin-bottom: rem(21);
+        }
     }
     &__footer {
         margin-top: rem(20);
         text-align: center;
+        @media only screen and (min-width: $tablet) {
+            margin-top: rem(30);
+        }
     }
 }
 
@@ -19,6 +30,9 @@
     background: #ffffff;
     box-shadow: rem(0) rem(6) rem(29) rgba(15, 16, 17, 0.05);
     border-radius: rem(5);
+    @media only screen and (min-width: $tablet) {
+        padding: rem(27) rem(30) rem(29);
+    }
     &__head {
         display: grid;
         grid-column-gap: rem(0);
@@ -26,6 +40,10 @@
         position: relative;
         padding-right: rem(5);
         margin-bottom: rem(6);
+        @media only screen and (min-width: $tablet) {
+            grid-template-columns: auto 1fr auto;
+            margin-bottom: rem(11);
+        }
     }
     &__content {
         padding-bottom: rem(1);
@@ -35,11 +53,18 @@
         justify-content: space-between;
         align-items: center;
         margin-bottom: rem(4);
+        @media only screen and (min-width: $tablet) {
+            margin-top: rem(8);
+            padding-right: rem(10);
+        }
     }
     &__ellipsis {
         position: absolute;
         top: rem(-5);
         right: rem(-1);
+        @media only screen and (min-width: $tablet) {
+            font-size: rem(14);
+        }
         a {
             color: #87919c;
             text-decoration: none;
@@ -58,8 +83,15 @@
         overflow: hidden;
         grid-area: 1 / 1 / 4 / 2;
         margin-right: rem(17);
+        @media only screen and (min-width: $tablet) {
+            width: rem(48);
+            height: rem(48);
+        }
         &:before {
             @extend %icon-no-pic;
+            @media only screen and (min-width: $tablet) {
+                font-size: rem(18);
+            }
         }
         img {
             max-width: 100%;
@@ -72,6 +104,11 @@
     &__info {
         grid-area: 1 / 2 / 2 / 3;
         margin-top: rem(-6);
+        @media only screen and (min-width: $tablet) {
+            display: flex;
+            align-items: center;
+            margin-top: rem(-6);
+        }
     }
     &__name {
         font-weight: 600;
@@ -82,6 +119,12 @@
         margin-right: rem(8);
         // margin-top: rem(2);
         vertical-align: middle;
+        @media only screen and (min-width: $tablet) {
+            font-size: rem(16);
+            line-height: rem(24);
+            margin-bottom: rem(-2);
+            letter-spacing: rem(-0.2);
+        }
     }
     &__status {
         // grid-area: 1 / 3 / 2 / 4;
@@ -90,6 +133,10 @@
         display: flex;
         align-items: center;
         margin-top: rem(1);
+        @media only screen and (min-width: $tablet) {
+            // display: inline-flex;
+            margin-left: rem(25);
+        }
     }
     &__flag {
         width: rem(16);
@@ -100,6 +147,7 @@
         img {
             max-width: 100%;
             height: auto;
+            display: block;
         }
     }
     &__country {
@@ -111,9 +159,33 @@
         font-size: rem(14);
         line-height: rem(24);
         color: #87919c;
+        @media only screen and (min-width: $tablet) {
+            margin-left: rem(25);
+            line-height: rem(22);
+        }
     }
     &__count-messages {
         display: none;
+        font-size: rem(14);
+        line-height: rem(22);
+        color: #87919c;
+        white-space: nowrap;
+        position: relative;
+        padding-right: rem(33);
+        @media only screen and (min-width: $tablet) {
+            display: block;
+        }
+        &:after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            margin-top: rem(-1.5);
+            width: rem(3);
+            height: rem(3);
+            right: rem(15);
+            border-radius: rem(500);
+            background: #ced7e0;
+        }
     }
     &__rating {
         grid-area: 4 / 1 / 5 / 2;
@@ -121,10 +193,27 @@
         align-items: center;
         justify-content: center;
         margin-right: rem(6);
+        @media only screen and (min-width: $tablet) {
+            grid-area: 1 / 3 / 2 / 4;
+            margin-right: rem(29);
+            margin-top: rem(-1);
+        }
     }
-    &__store {
+    &__messages-store {
         grid-area: 4 / 2 / 5 / 3;
         padding-top: rem(7);
+        @media only screen and (min-width: $tablet) {
+            grid-area: 2 / 2 / 3 / 4;
+            padding-top: rem(0);
+            margin-top: rem(-3);
+            display: flex;
+            align-items: center;
+        }
+    }
+    &__store {
+        @media only screen and (min-width: $tablet) {
+            display: flex;
+        }
     }
     &__store-name {
         overflow: hidden;
@@ -132,17 +221,31 @@
         display: -webkit-box;
         -webkit-line-clamp: 2;
         -webkit-box-orient: vertical;
+        @media only screen and (min-width: $tablet) {
+            -webkit-line-clamp: 1;
+        }
         span {
             margin-right: rem(15);
         }
     }
     &__char {
+        position: relative;
         margin-bottom: rem(10);
+        @media only screen and (min-width: $tablet) {
+            padding-left: rem(33);
+            margin-left: rem(1);
+        }
         &:before {
             display: inline-block;
             vertical-align: middle;
             margin-right: rem(6);
             font-size: rem(18);
+            @media only screen and (min-width: $tablet) {
+                font-size: rem(22);
+                position: absolute;
+                top: rem(2);
+                left: 0;
+            }
         }
         &-title {
             font-weight: 600;
@@ -150,6 +253,9 @@
             line-height: rem(22);
             display: inline-block;
             vertical-align: middle;
+            @media only screen and (min-width: $tablet) {
+                display: none;
+            }
         }
         &-content {
             margin-top: rem(1);
@@ -181,4 +287,11 @@
     box-sizing: border-box;
     border-radius: rem(5);
     display: inline-block;
+    @media only screen and (min-width: $tablet) {
+        letter-spacing: rem(-0.2);
+    }
+    &--blocked {
+        color: $colorNegative;
+        border-color: $colorNegative;
+    }
 }
