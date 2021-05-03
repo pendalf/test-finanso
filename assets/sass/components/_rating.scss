@@ -1,11 +1,31 @@
 .rating {
     background: #fff;
     padding: rem(18) rem(16) rem(31);
+    @media only screen and (min-width: $tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding: rem(26) rem(34) rem(26);
+        box-shadow: rem(0) rem(6) rem(29) rgba(15, 16, 17, 0.05);
+        border-radius: rem(5);
+    }
     &__title {
         font-weight: 500;
         font-size: rem(16);
         line-height: rem(24);
         color: $mainTitleColor;
+        @media only screen and (min-width: $tablet) {
+            width: 100%;
+            font-size: rem(20);
+            line-height: rem(32);
+        }
+    }
+    &__total-rate {
+        @media only screen and (min-width: $tablet) {
+            order: 10;
+            margin-top: rem(20);
+            width: calc(50% - #{rem(52)});
+        }
     }
     &__rate {
         font-weight: 500;
@@ -17,17 +37,27 @@
         span {
             font-size: rem(40);
             margin-right: rem(5);
+            @media only screen and (min-width: $tablet) {
+                font-size: rem(50);
+            }
         }
     }
     &__stars {
         display: flex;
         justify-content: center;
+        @media only screen and (min-width: $tablet) {
+            margin-top: rem(7);
+        }
     }
     &__star {
         position: relative;
         font-size: rem(24);
         margin: 0 rem(4);
         color: #ced7e0;
+        @media only screen and (min-width: $tablet) {
+            font-size: rem(26);
+            margin: 0 rem(5);
+        }
         &:before {
             display: block;
             @extend %icon-star;
@@ -47,12 +77,23 @@
         margin-top: rem(13);
         color: #87919c;
         text-align: center;
+        @media only screen and (min-width: $tablet) {
+            line-height: rem(22);
+            margin-top: rem(21);
+        }
     }
     &__bars {
         margin-top: rem(20);
+        @media only screen and (min-width: $tablet) {
+            width: calc(50% - #{rem(23)});
+            margin-top: rem(21);
+        }
     }
     &__bar-item {
         margin-bottom: rem(1);
+        @media only screen and (min-width: $tablet) {
+            margin-bottom: rem(11);
+        }
     }
     &__bar-title {
         font-size: rem(14);
