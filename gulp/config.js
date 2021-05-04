@@ -10,7 +10,7 @@ const _default = {
     src,
     buildPath: path.join(root, '/build'),
     pug2html: {
-        beautifyHtml: false
+        beautifyHtml: true
     },
     lighthouse: {
         reportPath: path.join(root, 'reports'),

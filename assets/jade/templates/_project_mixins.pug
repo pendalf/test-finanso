@@ -11,8 +11,9 @@ mixin footer
 
 mixin commentsRender(comments)
 	each comment in comments
-		//- comment
+		// comment
 		.comment
+			// .comment__head 
 			.comment__head
 				.comment__ellipsis
 					a.icon--ellipsis(href="#") 
@@ -39,7 +40,8 @@ mixin commentsRender(comments)
 							span #{comment.store}
 						if comment.link && comment.link !== ''
 							a(href=comment.link) Перейти
-
+			// end .comment__head 
+			// .comment__content
 			.comment__content
 				if comment.advantages && comment.advantages !== ''
 					.comment__char.comment__char--positive
@@ -49,6 +51,8 @@ mixin commentsRender(comments)
 					.comment__char.comment__char--negative
 						.comment__char-title Недостатки
 						.comment__char-content #{comment.disadvantages}
+			// end .comment__content
+			// .comment__footer
 			.comment__footer
 				button.btn Ответить
 				.likes
@@ -56,6 +60,5 @@ mixin commentsRender(comments)
 						.likes__count #{comment.likes}
 					.likes__item.likes__item--dislike
 						.likes__count #{comment.dislikes}
-
-
-		//- end comment
+			// .comment__footer
+		// end comment

@@ -7,13 +7,14 @@ block vars
 	-var array = {body_class:'', layuot_mod:'', sub_keywords:'',title_inner:'Отзывы'}
 block content_block	
 	.container
-		//- rating
+		// rating
 		.rating
 			.rating__title Общий рейтинг компании
 			.rating__total-rate
 				.rating__rate
 					span 4.8
 					| / 5
+				// .rating__stars
 				.rating__stars
 					.rating__star
 						.rating__star.rating__star--light
@@ -24,35 +25,37 @@ block content_block
 					.rating__star
 						.rating__star.rating__star--light(style="width: 50%")
 					.rating__star
+				// end .rating__stars
 				.rating__comments 6 отзывов
+			// .rating__bars
 			.rating__bars
-				//- .rating__bar-item
+				// .rating__bar-item
 				.rating__bar-item
 					.rating__bar-title Скорость работы
 					.rating__bar
 						.rating__bar-line
 							.rating__bar-filled.rating__bar-filled--high(style="width: 96%")
 						.rating__bar-value 4.8
-				//- end .rating__bar-item
-				//- .rating__bar-item
+				// end .rating__bar-item
+				// .rating__bar-item
 				.rating__bar-item
 					.rating__bar-title Качество обслуживания
 					.rating__bar
 						.rating__bar-line
 							.rating__bar-filled.rating__bar-filled--middle(style="width: 62%")
 						.rating__bar-value 3.1
-				//- end .rating__bar-item
-				//- .rating__bar-item
+				// end .rating__bar-item
+				// .rating__bar-item
 				.rating__bar-item
 					.rating__bar-title Ценовая политика
 					.rating__bar
 						.rating__bar-line
 							.rating__bar-filled.rating__bar-filled--low(style="width: 32%")
 						.rating__bar-value 1.6
-				//- end .rating__bar-item
-
-		//- end rating
-		//- comments
+				// end .rating__bar-item
+			// end .rating__bars
+		// end rating
+		// comments
 		.comments
 			.comments__title Отзывы о компании ООО “Ковалевский”
 			.comments__items
@@ -60,4 +63,4 @@ block content_block
 			.comments__footer
 				a.btn.btn--more(href="#") Показать еще
 					span.btn__count 34
-		//- end comments
+		// end comments
