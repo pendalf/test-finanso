@@ -4,8 +4,20 @@ html {
     padding: 0;
 }
 
-html * {
-    max-height: rem(1000000);
+html {
+    font-size: (16/320) * 100vw;
+    @media only screen and (min-width: $tablet) {
+        font-size: (16/768) * 100vw;
+    }
+    @media only screen and (min-width: $desktop) {
+        font-size: (16/1200) * 100vw;
+    }
+    @media only screen and (min-width: 1200px) {
+        font-size: rem(16);
+    }
+    * {
+        max-height: rem(1000000);
+    }
 }
 
 body {
@@ -33,6 +45,8 @@ body {
         align-items: flex-start;
         justify-content: space-between;
         padding-top: 0;
+        padding-left: 2%;
+        padding-right: 2%;
     }
 }
 
