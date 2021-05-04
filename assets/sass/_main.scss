@@ -21,10 +21,18 @@ body {
 }
 
 .container {
+    max-width: 1170px;
     @media only screen and (min-width: $tablet) {
         margin-left: rem(39);
         margin-right: rem(39);
         padding-top: rem(30);
+    }
+    @media only screen and (min-width: $desktop) {
+        margin: 0 auto;
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-top: 0;
     }
 }
 

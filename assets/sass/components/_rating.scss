@@ -1,6 +1,7 @@
 .rating {
     background: #fff;
     padding: rem(18) rem(16) rem(31);
+    box-sizing: border-box;
     @media only screen and (min-width: $tablet) {
         display: flex;
         flex-wrap: wrap;
@@ -8,6 +9,12 @@
         padding: rem(26) rem(34) rem(26);
         box-shadow: rem(0) rem(6) rem(29) rgba(15, 16, 17, 0.05);
         border-radius: rem(5);
+    }
+    @media only screen and (min-width: $desktop) {
+        order: 1;
+        width: (370 / 1170 * 100%);
+        margin-top: rem(119);
+        padding: rem(26) rem(40) rem(24);
     }
     &__title {
         font-weight: 500;
@@ -19,12 +26,20 @@
             font-size: rem(20);
             line-height: rem(32);
         }
+        @media only screen and (min-width: $desktop) {
+            text-align: center;
+        }
     }
     &__total-rate {
         @media only screen and (min-width: $tablet) {
             order: 10;
             margin-top: rem(20);
             width: calc(50% - #{rem(52)});
+        }
+        @media only screen and (min-width: $desktop) {
+            order: 0;
+            width: 100%;
+            margin-top: rem(15);
         }
     }
     &__rate {
@@ -87,6 +102,11 @@
         @media only screen and (min-width: $tablet) {
             width: calc(50% - #{rem(23)});
             margin-top: rem(21);
+        }
+        @media only screen and (min-width: $desktop) {
+            width: 100%;
+            margin-top: rem(33);
+            margin-right: rem(2);
         }
     }
     &__bar-item {

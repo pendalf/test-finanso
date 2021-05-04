@@ -3,6 +3,9 @@
     @media only screen and (min-width: $tablet) {
         margin: rem(36) rem(0) rem(40);
     }
+    @media only screen and (min-width: $desktop) {
+        width: (770 / 1170 * 100%);
+    }
     &__title {
         font-weight: 500;
         font-size: rem(16);
