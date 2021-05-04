@@ -36,8 +36,7 @@ mixin commentsRender(comments)
 				.comment__messages-store
 					.comment__count-messages #{comment.messageCount}
 					.comment__store
-						.comment__store-name
-							span #{comment.store}
+						.comment__store-name #{comment.store}
 						if comment.link && comment.link !== ''
 							a(href=comment.link) Перейти
 			// end .comment__head 

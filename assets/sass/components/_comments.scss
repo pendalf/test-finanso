@@ -226,18 +226,30 @@
         @media only screen and (min-width: $tablet) {
             display: flex;
         }
+        &--cutted {
+            @media only screen and (min-width: $tablet) {
+                display: block;
+            }
+            .comment__store-name {
+                display: inline;
+                &:after {
+                    content: " ";
+                }
+            }
+        }
     }
     &__store-name {
         overflow: hidden;
         text-overflow: ellipsis;
         display: -webkit-box;
-        -webkit-line-clamp: 2;
+        -webkit-line-clamp: 1;
         -webkit-box-orient: vertical;
         @media only screen and (min-width: $tablet) {
             -webkit-line-clamp: 1;
         }
         span {
             margin-right: rem(15);
+            // display: inline-block;
         }
     }
     &__char {
