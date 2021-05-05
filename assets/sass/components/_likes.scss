@@ -6,7 +6,7 @@
         line-height: rem(22);
         display: flex;
         align-items: center;
-        color: #87919c;
+        color: $lightTextColor;
         transition: 0.2 all;
         cursor: pointer;
         &:before {

@@ -10,13 +10,13 @@ mixin footer
 	// End Footer
 
 mixin commentsRender(comments)
-	each comment in comments
+	each comment, i in comments
 		// comment
 		.comment
 			// .comment__head 
 			.comment__head
 				.comment__ellipsis
-					a.icon--ellipsis(href="#")
+					a(href="#")
 				.comment__userpic
 					if comment.userpic && comment.userpic !== ''
 						img(src=comment.userpic, alt=comment.name)
@@ -55,9 +55,9 @@ mixin commentsRender(comments)
 			.comment__footer
 				button.btn Ответить
 				.likes
-					.likes__item.likes__item--like
+					.likes__item.likes__item--like(class=(i === 2) ? 'active' : '')
 						.likes__count #{comment.likes}
-					.likes__item.likes__item--dislike
+					.likes__item.likes__item--dislike(class=(i === 1) ? 'active' : '')
 						.likes__count #{comment.dislikes}
 			// .comment__footer
 		// end comment

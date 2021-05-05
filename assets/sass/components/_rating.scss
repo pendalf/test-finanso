@@ -1,5 +1,5 @@
 .rating {
-    background: #fff;
+    background: $blocksBG;
     padding: rem(18) rem(16) rem(31);
     box-sizing: border-box;
     @media only screen and (min-width: $tablet) {
@@ -68,7 +68,7 @@
         position: relative;
         font-size: rem(24);
         margin: 0 rem(4);
-        color: #ced7e0;
+        color: $userpicBG;
         @media only screen and (min-width: $tablet) {
             font-size: rem(26);
             margin: 0 rem(5);
@@ -86,7 +86,7 @@
             top: 0;
             left: 0;
             margin: 0;
-            color: #fabd48;
+            color: $starsColor;
             overflow: hidden;
         }
     }
@@ -94,7 +94,7 @@
         font-size: rem(13);
         line-height: rem(21);
         margin-top: rem(13);
-        color: #87919c;
+        color: $lightTextColor;
         text-align: center;
         @media only screen and (min-width: $tablet) {
             line-height: rem(22);
@@ -144,7 +144,7 @@
             background: $colorPositive;
         }
         &--middle {
-            background: #fabd48;
+            background: $starsColor;
         }
         &--low {
             background: $colorNegative;
@@ -168,7 +168,7 @@
     display: flex;
     align-items: center;
     &:before {
-        color: #fabd48;
+        color: $starsColor;
         margin-right: rem(6);
         font-size: rem(16);
         @extend %icon-star;

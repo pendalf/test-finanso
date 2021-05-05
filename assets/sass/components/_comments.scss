@@ -34,7 +34,7 @@
 .comment {
     padding: rem(24) rem(20) rem(20);
     margin-bottom: rem(10);
-    background: #ffffff;
+    background: $blocksBG;
     box-shadow: rem(0) rem(6) rem(29) rgba(15, 16, 17, 0.05);
     border-radius: rem(5);
     @media only screen and (min-width: $tablet) {
@@ -73,20 +73,23 @@
             font-size: rem(14);
         }
         a {
-            color: #87919c;
+            color: $lightTextColor;
             text-decoration: none;
+            &:before {
+                @extend %icon-ellipsis;
+            }
         }
     }
     &__userpic {
         position: relative;
         width: rem(40);
         height: rem(40);
-        background: #ced7e0;
+        background: $userpicBG;
         border-radius: rem(500);
         display: flex;
         justify-content: center;
         align-items: center;
-        color: #fff;
+        color: $blocksBG;
         overflow: hidden;
         grid-area: 1 / 1 / 4 / 2;
         margin-right: rem(17);
@@ -165,7 +168,7 @@
         margin-top: rem(1);
         font-size: rem(14);
         line-height: rem(24);
-        color: #87919c;
+        color: $lightTextColor;
         @media only screen and (min-width: $tablet) {
             margin-left: rem(25);
             line-height: rem(22);
@@ -175,7 +178,7 @@
         display: none;
         font-size: rem(14);
         line-height: rem(22);
-        color: #87919c;
+        color: $lightTextColor;
         white-space: nowrap;
         position: relative;
         padding-right: rem(33);
@@ -191,7 +194,7 @@
             height: rem(3);
             right: rem(15);
             border-radius: rem(500);
-            background: #ced7e0;
+            background: $userpicBG;
         }
     }
     &__rating {
@@ -294,6 +297,9 @@
             &:before {
                 color: $colorNegative;
                 @extend %icon-minus;
+                @media only screen and (min-width: $tablet) {
+                    color: $lightTextColor;
+                }
             }
         }
     }
@@ -306,7 +312,7 @@
     font-size: rem(10);
     line-height: rem(12);
     color: $colorPositive;
-    background: #ffffff;
+    background: $blocksBG;
     border: rem(1) solid $colorPositive;
     box-sizing: border-box;
     border-radius: rem(5);

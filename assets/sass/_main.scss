@@ -32,6 +32,10 @@ body {
     }
 }
 
+a {
+    color: $mainLinkColor;
+}
+
 .container {
     max-width: 1170px;
     @media only screen and (min-width: $tablet) {
